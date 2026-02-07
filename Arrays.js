@@ -1,0 +1,139 @@
+
+//is an object (special type of data structure) used to store the collection of data
+//two ways to declare the array
+
+// let arr1 = new Array()
+// let arr2 = []
+
+// let arr = [1 , 2, 3]
+// console.log(typeof(arr)); //object
+
+// let arr1 = ["Orange", "Red", "Blue"]
+// console.log(arr1[1]);
+// arr1[2] = "Yellow" 
+// console.log(arr1); //[ 'Orange', 'Red', 'Yellow' ]
+
+// let arr1 = ['Apple' , {name : 'AJ'} , 25 , function(){}, true]
+
+// console.log(arr1[0]);
+// console.log(arr1[1].name);
+// console.log(arr1[2]);
+// console.log(arr1[3]);
+// console.log(arr1[4]);
+
+
+/*>>> pop & push method
+ >> pop -> used to remove the last element from the Array
+  >> push -> user to add the element to the array
+
+let arr = [1 , 2 , 3 , 4 ]
+console.log(arr.pop())
+console.log(arr) //[ 1, 2, 3 ]
+
+console.log(arr.push(5))
+console.log(arr) //[ 1, 2, 3, 5 ]*/
+
+/* >>> shift & unshift
+    >> shift- eleminates firsy elelemt from the array
+    >> unshift - add element to the start of array
+let arr = [1 , 2 , 3 , 4 ]
+console.log(arr.shift());
+console.log(arr); // [ 2, 3, 4 ]
+
+console.log(arr.unshift(6));
+console.log(arr);  //[ 6, 2, 3, 4 ] */
+
+
+
+/*let color = ["Red", "Blue", "Orange"]
+let color1 = color
+console.log(color);
+color1.push("White") // push method adds elment to the last index
+
+console.log(color); // as arrays 
+console.log(color.length)*/
+
+/* Loop 
+    >> for loop-
+
+
+let arr = ['A', 'B' , 'C' , 'D']
+for(let i=0; i<arr.length; i++){
+    console.log(arr[i]);
+}
+
+   // >> for ..of 
+let arr = ['A', 'B' , 'C' , 'D']
+for(let arr1 of arr){
+    console.log(arr1);
+}*/
+   
+
+/*let arr = ['A', 'B' , 'C' , 'D']
+//checks that the specific element is part of an array or not
+console.log(arr.includes('a')) //false
+// splice is used to eliminated the required element from an array 
+console.log(arr.splice(1)); // [ 'B', 'C', 'D' ]
+console.log(arr); //[ 'A' ]
+
+//used to show the required part from the array
+console.log(arr.slice(1, 2)); // [] here due to splice method no elements on 1 index position */
+
+
+
+/*
+>>> indexOf()-
+    >> to find the index of given element
+
+let num = [1, 2, 3, 4,]
+let char = ['A', 'B', 'C', 'D',]
+ 
+console.log(char.indexOf('A')) //0
+
+>>> concat()-
+    >> use to combine the two or more arrays together without modifying the existing array
+
+console.log(num.concat(char)) 
+/*
+  [1,   2,   3,   4,
+  'A', 'B', 'C', 'D'
+]*/
+
+
+/*
+>>> splice()-
+    >> use to remove and replce the elements in the array
+
+let days = ['Mon', 'Tue', 'Thu', 'Wed',]
+let months = ['Jan', 'Frb', 'Mar', [1, 2, 3]]
+
+days.splice(2,2,'Wed','Thu') // use to remove and replace the elemets in the array
+months.splice(1,1,'Feb')
+const ans = [...days, ...months]
+
+console.log(ans) // displated output in array blocks
+console.log(...ans) // unpacks the array
+*/
+
+
+
+
+/*>>> Flat()
+    >> use to flatten the array
+
+let arr = ['Mon', 'Tue', 'Thu', 'Wed',['Jan', 'Feb', 'Mar', ['a', 'b', 'c', ['aa', ['aaa']]]]]
+console.log(arr.flat()); //bydegfault depth is at level 1
+console.log(arr.flat(2)); // manual depth can be changes to level 2
+console.log(arr.flat(Infinity)) */
+
+
+/* 
+>>> Array
+
+let arr = ['A', 'B', 'C']
+let str1 = "Ajinkya"
+let str2 = 10
+console.log(Array.isArray(str1)) //false
+console.log(Array.from(str1)) //[ 'A', 'j', 'i','n', 'k', 'y','a' ]
+console.log(Array.of(str1,str2)) //[ 'Ajinkya', 10 ]
+*/
