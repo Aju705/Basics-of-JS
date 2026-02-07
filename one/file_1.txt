@@ -1,0 +1,1 @@
+>> 1st bug is fix on child branch file 1
