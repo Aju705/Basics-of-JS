@@ -10,9 +10,35 @@ return user
 let use = new fun
 console.log(`My name is ${use.name} and my age is ${use.age}   ${use}`); */
 
-/*const sym = Symbol('key')
+/*
+
+/*
+>>> 'Delete' operator*/
+
+const obj ={
+    name :"AJ",
+    id : 25,
+    age : 26,
+    "Current city" : "Pune",
+}
+console.log(obj.name);
+console.log(obj['name'], obj['id'])
 
 
+
+
+console.log(obj); //{ name: 'AJ', id: 25 }
+console.log(obj.id); //25
+delete obj.id;  // delete operator is use to delete the value from the object
+console.log(obj); //{ name : 'AJ' }
+console.log(obj.id); //undefined
+
+ 
+
+
+
+/*
+const sym = Symbol('key')
 let user ={
     name : 'Ajinkya',
     age : 25,
@@ -241,16 +267,17 @@ console.log(Object.keys);
 
 
 
-/*
+
 //>>> q1- Check for emptiness
 
 
 function isEmpty(obj){
    
     for(let key in obj){
-        return false
+        return console.log(obj);
+        
     }
-    return true
+    return console.log(obj);
 }
 
 let schedule = {};
@@ -259,9 +286,10 @@ console.log(isEmpty(schedule));
  // true
 
 schedule["8:30"] = "get up";
+console.log(schedule["8:30"]);
 
 console.log(isEmpty(schedule)); // false
-*/
+
 
 
 /*
