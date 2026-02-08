@@ -10,9 +10,36 @@ return user
 let use = new fun
 console.log(`My name is ${use.name} and my age is ${use.age}   ${use}`); */
 
-/*const sym = Symbol('key')
+/*
+
+/*
+>>> 'Delete' operator*/
+
+const obj ={
+    name :"AJ",
+    id : 25,
+    age : 26,
+    "Current city" : "Pune",
+}
+console.log(obj.name);
+console.log(obj['name'], obj['id'])
 
 
+
+
+
+console.log(obj); //{ name: 'AJ', id: 25 }
+console.log(obj.id); //25
+delete obj.id;  // delete operator is use to delete the value from the object
+console.log(obj); //{ name : 'AJ' }
+console.log(obj.id); //undefined bcoz property 
+
+ 
+
+
+
+/*
+const sym = Symbol('key')
 let user ={
     name : 'Ajinkya',
     age : 25,
@@ -23,7 +50,7 @@ let user ={
 }
 
 console.log(user.name);
-console.log(user["name", "age"]);  // two access the values from the given object
+console.log(user["name"]);  // two access the values from the given object
 console.log(user["full name"]); // multi word key name cant be accessed by obj.key instead use this format 
 console.log(user[sym]); //key value
 
@@ -67,7 +94,8 @@ const regularUser ={
 
 console.log(regularUser.userDetails); //{ userName: { firstName: 'Ajinkya', lastName: 'Nagawade' } }
 console.log(regularUser.userDetails?.userName?.lastName); //Ajinkya
-*/
+*/ 
+// here we user ? it is called optional chaining this will avoid the crashing if any property is missing in the object instead gives undefined
 
 
 
@@ -100,11 +128,15 @@ getValue(testObj, "name") //Ajinkya
 /*
 //>> for loop
 
+let testObj = {
+    name : "AJ",
+    age : 25,
+}
 let key = "name"
 let keys = ["name", "age"]
 for(let key of keys){
     console.log(testObj[key]);
-} // Ajinkya 25
+} // AJ 25
 */
 
 
@@ -137,21 +169,26 @@ console.log(name in testObject); //error- name is not defined
 
 
 
-
 /*
 // >>property name shorthand
 
 function shorthand(name, age){
-    return{
-        name : name, //one way to return
-        age : age,
-    }
     // return{
-    //     name, //shorten the syntax when common property name is there
-    //     age,
+    //     name : name, //one way to return
+    //     age : age,
     // }
+    return{
+        name : 'aa', //shorten the syntax when common property name is there
+        age,
+    }
 }
-let user = shorthand("AJ", 25)
+/*let user = {
+    name: 'AJ',
+    age : 25
+}
+console.log(shorthand(user)); //{ name: 'AJ', age: 25 }
+ 
+let user = shorthand('SN', 25)
 console.log(user.name);
 */
 
@@ -173,7 +210,7 @@ console.log(obj3)
 
 
 /*
-//>>> spread operator
+//>>> spread operator- "spreads" or unpacks the contents of an array or an object into a new location
 
 
 const obj1 = {1:"a", 2:"b"}
@@ -198,8 +235,7 @@ const users = [
     }
 ]
 
-console.log(users[1].email);
-
+console.log(users[1].email); //a@gmail.com
 
 const sampleObj  = {
     city : 'Pune',
@@ -207,25 +243,25 @@ const sampleObj  = {
     location : 'vadgaon Sheri'
 }
 
-console.log(Object.keys);
-*/
+console.log(Object.keys(sampleObj)); //[ 'city', 'state', 'location' ]
 
+*/
 
 
 /* 
 // >>> "for...in" loop -  used to walk through all keys of an object 
+
+
+const obj = {
+    name: "AJ",
+    age: 25,
+}
+
+for(let key in obj){
+    console.log(key); //name age
+    console.log(obj[key]);    //AJ 25
+}
 */
-
-// const obj = {
-//     name: "AJ",
-//     age: 25,
-// }
-
-// for(let key in obj){
-//     console.log(key); //name age
-//     console.log(obj[key]);    //AJ 25
-// }
-
 
 
 
@@ -242,15 +278,17 @@ console.log(Object.keys);
 
 
 /*
+
 //>>> q1- Check for emptiness
 
 
 function isEmpty(obj){
    
     for(let key in obj){
-        return false
+        return console.log(obj);
+        
     }
-    return true
+    return console.log(obj);
 }
 
 let schedule = {};
@@ -259,9 +297,9 @@ console.log(isEmpty(schedule));
  // true
 
 schedule["8:30"] = "get up";
+console.log(schedule["8:30"]);
 
 console.log(isEmpty(schedule)); // false
-*/
 
 
 /*
@@ -283,11 +321,7 @@ let menu = {
 };
 
 let a = multiplyNumeric(menu)
-console.log(a)
+console.log(a) 
+//{ width: 400, height: 600, title: 'My menu' }
 */
 
-
-
-
-
-//>>> Destructuring of object

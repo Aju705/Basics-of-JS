@@ -137,3 +137,26 @@ console.log(Array.isArray(str1)) //false
 console.log(Array.from(str1)) //[ 'A', 'j', 'i','n', 'k', 'y','a' ]
 console.log(Array.of(str1,str2)) //[ 'Ajinkya', 10 ]
 */
+
+
+
+/*
+>>> sort() - use to sort the array
+
+// Want to sort array in ascending order
+let compare = (a,b)=> {
+    return a-b
+}
+let array = [1, 33, 45, 87, 3, 90, 222]
+console.log(array.sort()); //[ 1, 222, 3, 33, 45, 87, 90 ] >> sort() arrange the array on alphabetical basis
+console.log(array.sort(compare));   //[1,  3,  33, 45, 87, 90, 222]
+*/
+
+
+
+/*
+>>> reverse
+
+let num = [1, 2, 3, 4, 5]
+console.log(num.reverse()); [ 5, 4, 3, 2, 1 ]
+*/
