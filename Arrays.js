@@ -69,16 +69,25 @@ for(let arr1 of arr){
 }*/
    
 
-/*let arr = ['A', 'B' , 'C' , 'D']
-//checks that the specific element is part of an array or not
-console.log(arr.includes('a')) //false
+/*
+//>>> Slice is used to trim out the desired elemenets from the array
+//it will not make any change to existing array
+let array = [1, 2, 3, 4, 5]
 
-// splice is used to eliminated the required element from an array 
-console.log(arr.splice(1)); // [ 'B', 'C', 'D' ]
-console.log(arr); //[ 'A' ]
+// as parameter it takes "start_index_position" , "no_of_elemets_tobe_removed"
+console.log(array.slice(0,2));  //[ 1, 2 ]
+console.log(array);  //[ 1, 2, 3, 4, 5 ]
 
-//slice used to show the required part from the array
-console.log(arr.slice(1, 2)); // [] here due to splice method no elements on 1 index position */
+
+//>>> splice used to remove the elements from the array an at the same time can add new elemenets to the same position
+//it will made changes to existing array
+let array1 = [1, 2, 3, 4, 5]
+
+//as parameter it takes "start_index_value" , "no_of_elements_tobe_removed" , "new_elements_tobe_added"
+console.log(array1.splice(0,2,6,7));  //[ 1, 2 ]
+console.log(array1);  //[ 1, 2, 3, 4, 5 ]
+
+*/
 
 
 
