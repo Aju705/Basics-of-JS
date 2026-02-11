@@ -72,11 +72,12 @@ for(let arr1 of arr){
 /*let arr = ['A', 'B' , 'C' , 'D']
 //checks that the specific element is part of an array or not
 console.log(arr.includes('a')) //false
+
 // splice is used to eliminated the required element from an array 
 console.log(arr.splice(1)); // [ 'B', 'C', 'D' ]
 console.log(arr); //[ 'A' ]
 
-//used to show the required part from the array
+//slice used to show the required part from the array
 console.log(arr.slice(1, 2)); // [] here due to splice method no elements on 1 index position */
 
 
