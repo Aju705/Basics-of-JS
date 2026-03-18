@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Async file 3</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    let intervalId;
+    const repeatText = function(){
+
+        const text = function(){
+            console.log("Ajinkya", Date.now());
+        } 
+        if(!intervalId){
+            intervalId = setInterval(text, 1000)
+        } 
+    }
+    const stopText = function(){
+        clearInterval(intervalId)
+        intervalId = null
+    }
+
+        document.querySelector('#start').addEventListener('click', repeatText)
+
+        document.querySelector('#stop').addEventListener('click', stopText)
+        
+
+        
+</script>
+</html>

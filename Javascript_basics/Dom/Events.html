@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Basics</title>
+</head>
+<body style="background-color: #414141; color: white;">
+    <div class="bg-black"></div> 
+    <h1 class=" heading">DOM basics</h1>
+
+    <h2>Amazing Images</h2>
+    <div>
+        <ul id="images">
+            <li><img width="300px" id="mustang1" src="C:\Users\Ajinkya.Nagawade\VS code\Basics-of-JS\Javascript_basics\Dom\image\54196859052_9249719e93_o.jpg" alt=""></li>
+            <li><img width="300px" id="mustang2" src="C:\Users\Ajinkya.Nagawade\VS code\Basics-of-JS\Javascript_basics\Dom\image\26_frd_mst_dkhrp_crgr_ps34_v1.avif" alt=""></li>
+            <li><img width="300px" id="mustang3" src="C:\Users\Ajinkya.Nagawade\VS code\Basics-of-JS\Javascript_basics\Dom\image\Ford-Mustang-Exterior-126883.avif" alt=""></li>
+            <li><img width="300px" id="mustang4" src="C:\Users\Ajinkya.Nagawade\VS code\Basics-of-JS\Javascript_basics\Dom\image\jweutEO0OmJ5HCFPZYx5jhVlRPXHbpoq.jpg" alt=""></li>
+
+            <li><a style="color: aliceblue;" id="google" href="https://www.google.com/">Google</a></li>
+        </ul>
+    </div>
+</body>
+<script>
+    // document.getElementById("mustang1").onclick = function(){
+    //     alert("Mustang 1")
+    // }
+
+    //attachEvent()
+    //jQuery - on
+
+    //type, timestamp, defailtPrevented
+    //target, toElement, srcElement, currentTarget
+    //clientX, clientY, ScreenX, screenY
+    //altKey, ctrKey, shiftkey, keycode
+
+    // event propogatiopn >> bubbling from bottom to up
+
+    // document.getElementById('images').addEventListener('click', function(e){
+    //     console.log("Click inside the ul");
+    // },false)
+    // document.getElementById('mustang1').addEventListener('click', function(e){
+    //     console.log("Click on mustang1");
+    //     e.stopPropagation() // it will restrict the bubbling process
+    // },false)
+    
+    // document.getElementById('google').addEventListener('click', function(e){
+    //     e.preventDefault();
+    //     e.stopPropagation();
+    //     console.log("Clicked on Google");
+
+    // })
+
+    // document.querySelector('#images').addEventListener('click', function(e){
+    //     console.log(e.target);    //<img width="300px" id="mustang1" src="C:\Users\Ajinkya.Nagawade\VS code\Basics-of-JS\Javascript_basics\Dom\image\54196859052_9249719e93_o.jpg" alt>
+    // },false)
+
+    document.querySelector('#images').addEventListener('click', function(e){
+        //console.log(e.target.parentNode);    //<img width="300px" id="mustang1" src="C:\Users\Ajinkya.Nagawade\VS code\Basics-of-JS\Javascript_basics\Dom\image\54196859052_9249719e93_o.jpg" alt>
+        console.log(e.target.tagName);
+        if(e.target.tagName === 'IMG'){
+            let removeIt = e.target.parentNode;
+            removeIt.remove()
+        }
+        else{
+            console.log("LI");
+            
+        }
+        
+        //removeIt.parentNode.removeChild(removeIt)
+        
+
+    },false)
+    
+</script>
+</html>
