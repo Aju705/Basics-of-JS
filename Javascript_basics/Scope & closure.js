@@ -73,7 +73,7 @@ console.log(i);   //i is not defined
 
 
 
-//Closure - 
+//Closure - is an function which remembers its
 
 function createGreeter(name){
     let greeting ="Hello"
